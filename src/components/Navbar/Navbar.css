@@ -125,21 +125,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: #E2E8F0;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, filter 0.2s ease;
   text-decoration: none;
+  line-height: 1;
 }
 
 .top-social-btn:hover {
-  background-color: var(--color-primary-red, #E50914);
-  border-color: var(--color-primary-red, #E50914);
-  color: #FFFFFF;
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.12);
+  filter: brightness(1.15);
 }
 
 /* ==========================================================================
@@ -408,20 +401,9 @@
 
 /* Small Tablets & Mobile Devices (< 992px) */
 @media (max-width: 992px) {
+  /* Hide top bar on mobile/responsive as requested */
   .top-industrial-bar {
-    padding: 0.32rem 0;
-  }
-
-  .top-email-link {
-    display: none;
-  }
-
-  .top-divider {
-    display: none;
-  }
-
-  .top-social-label {
-    display: none;
+    display: none !important;
   }
 
   .main-navbar {
@@ -453,19 +435,6 @@
 }
 
 @media (max-width: 640px) {
-  .top-cert-badge .cert-text {
-    font-size: 0.7rem;
-  }
-
-  .top-contact-link {
-    font-size: 0.7rem;
-  }
-
-  .top-social-btn {
-    width: 24px;
-    height: 24px;
-  }
-
   .navbar-brand-logo {
     height: 46px;
     max-width: 185px;
@@ -473,14 +442,6 @@
 }
 
 @media (max-width: 375px) {
-  .top-cert-badge .cert-text {
-    font-size: 0.65rem;
-  }
-
-  .top-contact-link {
-    font-size: 0.65rem;
-  }
-
   .navbar-brand-logo {
     height: 40px;
     max-width: 160px;

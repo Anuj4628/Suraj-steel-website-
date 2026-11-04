@@ -1,60 +1,78 @@
 import React from 'react';
 
-export function InstagramIcon({ size = 15, className = '' }) {
+/**
+ * Official Authentic Brand Logos for Social Media
+ */
+
+export function InstagramIcon({ size = 18, className = '' }) {
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
       className={className}
       aria-hidden="true"
+      style={{ display: 'inline-block', verticalAlign: 'middle' }}
     >
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+      <defs>
+        <radialGradient id="instagram-gradient" cx="0.2" cy="1" r="1">
+          <stop offset="0%" stopColor="#FFD521" />
+          <stop offset="10%" stopColor="#F50000" />
+          <stop offset="50%" stopColor="#B900B4" />
+          <stop offset="100%" stopColor="#1C00DB" />
+        </radialGradient>
+      </defs>
+      <rect width="24" height="24" rx="6.5" fill="url(#instagram-gradient)" />
+      <rect
+        x="3.6"
+        y="3.6"
+        width="16.8"
+        height="16.8"
+        rx="4.8"
+        fill="none"
+        stroke="#FFFFFF"
+        strokeWidth="1.8"
+      />
+      <circle cx="12" cy="12" r="4.3" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
+      <circle cx="17.2" cy="6.8" r="1.15" fill="#FFFFFF" />
     </svg>
   );
 }
 
-export function FacebookIcon({ size = 15, className = '' }) {
+export function FacebookIcon({ size = 18, className = '' }) {
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
       className={className}
       aria-hidden="true"
+      style={{ display: 'inline-block', verticalAlign: 'middle' }}
     >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      <circle cx="12" cy="12" r="12" fill="#1877F2" />
+      <path
+        fill="#FFFFFF"
+        d="M16.5 12.05h-2.55V21h-3.72v-8.95H8v-3.15h2.23V6.62c0-1.85.88-4.72 4.72-4.72l3.47.01v3.08h-2.52c-.42 0-1.01.21-1.01 1.1v2.81h3.55l-.44 3.15z"
+      />
     </svg>
   );
 }
 
-export function TwitterIcon({ size = 15, className = '' }) {
+export function TwitterIcon({ size = 18, className = '' }) {
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
       className={className}
       aria-hidden="true"
+      style={{ display: 'inline-block', verticalAlign: 'middle' }}
     >
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+      <rect width="24" height="24" rx="6.5" fill="#0F1419" />
+      <path
+        fill="#FFFFFF"
+        d="M17.53 4.5h2.53l-5.53 6.32L21 20.5h-5.09l-3.99-5.21L7.36 20.5H4.83l5.91-6.76L4.2 4.5h5.22l3.6 4.76 4.51-4.76zm-.89 14.48h1.4L8.74 5.92H7.24l9.4 13.06z"
+      />
     </svg>
   );
 }
