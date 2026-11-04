@@ -1,0 +1,75 @@
+/**
+ * SURAJ PIPING — FLOATING CONTACT ACTION BUTTONS
+ */
+
+.floating-actions-stack {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.floating-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+}
+
+.btn-scroll-top {
+  background-color: #FFFFFF;
+  color: #02144B;
+  border: 1px solid #E2E8F0;
+}
+
+.btn-scroll-top:hover {
+  background-color: #F8FAFC;
+  color: #E50914;
+}
+
+.btn-phone-dial {
+  background-color: #02144B;
+  color: #FFFFFF;
+}
+
+.btn-phone-dial:hover {
+  background-color: #031D6B;
+}
+
+.btn-whatsapp-chat {
+  background-color: #10B981;
+  color: #FFFFFF;
+}
+
+.btn-whatsapp-chat:hover {
+  background-color: #059669;
+}
+
+@media (max-width: 640px) {
+  .floating-actions-stack {
+    bottom: 16px;
+    right: 16px;
+    gap: 8px;
+  }
+
+  .floating-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+

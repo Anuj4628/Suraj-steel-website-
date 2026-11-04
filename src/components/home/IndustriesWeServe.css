@@ -1,0 +1,258 @@
+/**
+ * SURAJ PIPING — INDUSTRIES WE SERVE SECTION STYLES
+ * Premium industrial showcase featuring:
+ * - Clean white background
+ * - Centered header with red horizontal accent line eyebrow
+ * - Bold navy & brand red typography
+ * - Balanced 3x2 desktop grid using original project assets
+ * - High-definition 4:3 industrial photograph presentation with 18px rounded borders
+ * - Restrained, professional hover zoom and subtle border transition
+ */
+
+.industries-section {
+  padding: 6rem 0 6.5rem;
+  background-color: #FFFFFF;
+  position: relative;
+  border-top: 1px solid #EAEFF5;
+}
+
+/* ==========================================================================
+   CENTERED SECTION HEADER
+   ========================================================================== */
+.industries-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyebrow Label with Short Red Horizontal Accent Line */
+.industries-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.15rem;
+}
+
+.industries-eyebrow-line {
+  display: inline-block;
+  width: 28px;
+  height: 2.5px;
+  background-color: var(--color-primary-red, #E50914);
+  border-radius: 2px;
+}
+
+.industries-eyebrow-text {
+  font-family: var(--font-family-sans);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-brand-navy, #031E6D);
+  text-transform: uppercase;
+}
+
+/* Main Heading */
+.industries-title {
+  font-family: var(--font-family-sans);
+  font-size: clamp(2.15rem, 3.4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-brand-navy, #031E6D);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.industries-title-highlight {
+  color: var(--color-primary-red, #E50914);
+}
+
+/* Supporting Description */
+.industries-subtitle {
+  font-family: var(--font-family-sans);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #556477;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   GRID LAYOUT
+   ========================================================================== */
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ==========================================================================
+   INDUSTRY CARD DESIGN
+   ========================================================================== */
+.industry-card {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  box-shadow: 0 4px 14px rgba(2, 20, 75, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.35s ease, transform 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.industry-card:hover {
+  border-color: rgba(3, 30, 109, 0.28);
+  box-shadow: 0 12px 28px rgba(2, 20, 75, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Media Container */
+.industry-card-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Card Image */
+.industry-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.industry-card:hover .industry-card-image {
+  transform: scale(1.045);
+}
+
+/* Subtle Gradient Scrim for Contrast & Legibility */
+.industry-card-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(2, 20, 75, 0.88) 0%,
+    rgba(2, 20, 75, 0.45) 42%,
+    rgba(2, 20, 75, 0.08) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+  transition: background 0.35s ease;
+}
+
+.industry-card:hover .industry-card-scrim {
+  background: linear-gradient(
+    to top,
+    rgba(2, 20, 75, 0.92) 0%,
+    rgba(2, 20, 75, 0.52) 45%,
+    rgba(2, 20, 75, 0.12) 75%,
+    transparent 100%
+  );
+}
+
+/* Card Information Overlay */
+.industry-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem 1.6rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.industry-card-category {
+  font-family: var(--font-family-sans);
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0.35rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.industry-card:hover .industry-card-category {
+  color: #FFA5A8;
+}
+
+.industry-card-title {
+  font-family: var(--font-family-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  transition: color 0.3s ease;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .industries-section {
+    padding: 5rem 0 5.5rem;
+  }
+
+  .industries-header {
+    margin-bottom: 3rem;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .industry-card {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+@media (max-width: 640px) {
+  .industries-section {
+    padding: 4.25rem 0 4.75rem;
+  }
+
+  .industries-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .industries-title {
+    font-size: 1.85rem;
+  }
+
+  .industries-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .industry-card {
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+  }
+
+  .industry-card-content {
+    padding: 1.25rem 1.25rem 1.15rem;
+  }
+
+  .industry-card-title {
+    font-size: 1.075rem;
+  }
+}
+

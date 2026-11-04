@@ -1,0 +1,312 @@
+/**
+ * SURAJ PIPING — HOMEPAGE WHY CHOOSE US SECTION STYLES
+ * Deep Navy Blue industrial showcase with centered header (big font, no red dot)
+ * followed by a balanced 2-column showcase (image on left, 2x2 benefits on right).
+ */
+
+.why-choose-us-section {
+  padding: 6.5rem 0 7rem;
+  background-color: var(--color-brand-navy-dark);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle Industrial Ambient Glow */
+.why-choose-us-section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(11, 47, 159, 0.25) 0%, rgba(2, 20, 75, 0) 70%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   CENTERED SECTION HEADER (Big Font, No Red Dot)
+   ========================================================================== */
+.why-section-header {
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyebrow Label: Centered, Big Font, No Red Dot */
+.why-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.35rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.24);
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.why-eyebrow-text {
+  font-family: var(--font-family-sans);
+  font-size: 0.95rem;
+  /* Big, clear, prominent font */
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+/* Large Main Heading (42px–48px Desktop) */
+.why-main-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.2rem, 3.6vw, 3.1rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+  color: #FFFFFF;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.15rem;
+  text-align: center;
+}
+
+/* Rectangular Red Highlighted Word */
+.why-highlight-badge {
+  background-color: var(--color-primary-red);
+  color: #FFFFFF;
+  padding: 0.08rem 0.65rem;
+  border-radius: 4px;
+  display: inline-block;
+  box-shadow: 0 3px 12px rgba(229, 9, 20, 0.4);
+  font-weight: inherit;
+}
+
+/* Centered Company Description */
+.why-description {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #CBD5E1;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ==========================================================================
+   TWO-COLUMN SHOWCASE (Left: Image, Right: 2x2 Benefits Grid)
+   ========================================================================== */
+.why-content-wrapper {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: INDUSTRIAL IMAGE
+   ========================================================================== */
+.why-image-column {
+  width: 100%;
+  height: 500px;
+}
+
+.why-image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 45px -10px rgba(1, 11, 43, 0.6);
+  background-color: var(--color-steel-950);
+}
+
+.why-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.why-image-container:hover .why-main-image {
+  transform: scale(1.035);
+}
+
+/* Red Accent Corner Badge */
+.why-image-accent-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(2, 20, 75, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  padding: 0.5rem 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FFFFFF;
+  font-family: var(--font-family-sans);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.why-accent-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-primary-red);
+  box-shadow: 0 0 8px var(--color-primary-red);
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: 2x2 BENEFITS FEATURE GRID
+   ========================================================================== */
+.why-text-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 2.25rem;
+}
+
+.why-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+}
+
+.why-benefit-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 2px;
+}
+
+.why-benefit-item:hover .why-benefit-icon-wrapper {
+  background-color: var(--color-primary-red);
+  border-color: var(--color-primary-red);
+  box-shadow: 0 4px 14px rgba(229, 9, 20, 0.35);
+  transform: translateY(-2px);
+}
+
+.why-benefit-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-benefit-title {
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-bold);
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  transition: color 200ms ease;
+}
+
+.why-benefit-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #94A3B8;
+  margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Laptop (1024px to 1240px) */
+@media (max-width: 1240px) {
+  .why-content-wrapper {
+    grid-template-columns: 45% 1fr;
+    gap: 2.75rem;
+  }
+
+  .why-benefits-grid {
+    gap: 1.75rem 1.5rem;
+  }
+}
+
+/* Tablet (768px to 1024px) */
+@media (max-width: 960px) {
+  .why-choose-us-section {
+    padding: 5rem 0 5.5rem;
+  }
+
+  .why-section-header {
+    margin-bottom: 3rem;
+  }
+
+  .why-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .why-image-column {
+    height: 400px;
+  }
+}
+
+/* Small Tablet & Mobile (<= 640px) */
+@media (max-width: 640px) {
+  .why-choose-us-section {
+    padding: 4rem 0 4.5rem;
+  }
+
+  .why-section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .why-image-column {
+    height: 320px;
+  }
+
+  .why-eyebrow {
+    padding: 0.4rem 1.15rem;
+  }
+
+  .why-eyebrow-text {
+    font-size: 0.85rem;
+  }
+
+  .why-main-heading {
+    font-size: 1.85rem;
+  }
+
+  .why-description {
+    font-size: 0.95rem;
+  }
+
+  .why-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .why-benefit-item {
+    gap: 1rem;
+  }
+
+  .why-benefit-title {
+    font-size: 1.05rem;
+  }
+}

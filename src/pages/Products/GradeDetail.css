@@ -1,0 +1,1014 @@
+/**
+ * SURAJ PIPING — GRADE DETAIL PAGE STYLES
+ * Compact, perfectly aligned industrial layout matching the design system
+ */
+
+.grade-detail-page {
+  background-color: #F8FAFC;
+  min-height: 100vh;
+  color: #1E293B;
+  font-family: var(--font-family-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+}
+
+/* =========================================================
+   1. BREADCRUMB BAR
+   ========================================================= */
+.gd-breadcrumb-bar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 0.85rem 0;
+}
+
+.gd-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+}
+
+.breadcrumb-link {
+  color: #64748B;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #E50914;
+}
+
+.breadcrumb-separator {
+  color: #94A3B8;
+  flex-shrink: 0;
+}
+
+.breadcrumb-current {
+  color: #02144B;
+  font-weight: 700;
+}
+
+/* =========================================================
+   2. TOP SHOWCASE SECTION & CARD
+   ========================================================= */
+.gd-showcase-section {
+  padding: 1.75rem 0 1.5rem;
+}
+
+.gd-showcase-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(2, 20, 75, 0.05);
+  display: grid;
+  grid-template-columns: 42% 58%;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.gd-showcase-media {
+  padding: 1.25rem;
+  display: flex;
+  background-color: #FAFCFE;
+  border-right: 1px solid #EEF2F6;
+}
+
+.gd-showcase-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0B1936;
+}
+
+.gd-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gd-pill-tag {
+  position: absolute;
+  z-index: 2;
+  font-size: 0.775rem;
+  font-weight: 700;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.35rem 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.gd-pill-top-left {
+  top: 14px;
+  left: 14px;
+  background-color: #02144B;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.gd-pill-bottom-right {
+  bottom: 14px;
+  right: 14px;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.status-dot-green {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10B981;
+  display: inline-block;
+}
+
+/* Right Content */
+.gd-showcase-info {
+  padding: 1.75rem 2rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gd-scope-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #E50914;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+}
+
+.scope-icon {
+  color: #E50914;
+}
+
+.gd-showcase-title {
+  font-size: clamp(1.65rem, 2.3vw, 2.15rem);
+  font-weight: 800;
+  color: #02144B;
+  line-height: 1.25;
+  margin: 0 0 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.title-product-tag {
+  color: #E50914;
+}
+
+.gd-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.85rem;
+}
+
+.meta-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.meta-uns {
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #DBEAFE;
+}
+
+.meta-mat {
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FEE2E2;
+}
+
+.meta-wnr {
+  background-color: #F8FAFC;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+.gd-showcase-desc {
+  font-size: 0.885rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 1.15rem;
+}
+
+/* Switch to Another Grade */
+.gd-grade-selector-wrap {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.gd-grade-selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.gd-selector-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #02144B;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: uppercase;
+}
+
+.selector-icon-red {
+  color: #E50914;
+}
+
+.gd-selector-hint {
+  font-size: 0.725rem;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.gd-grade-pills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.grade-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  font-size: 0.775rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  line-height: 1.2;
+}
+
+.grade-pill-btn:hover {
+  border-color: #02144B;
+  background-color: #F1F5F9;
+  color: #02144B;
+}
+
+.grade-pill-btn.active {
+  background-color: #02144B;
+  color: #FFFFFF;
+  border-color: #02144B;
+  box-shadow: 0 2px 6px rgba(2, 20, 75, 0.25);
+}
+
+.pill-info-icon {
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.grade-pill-btn.active .pill-info-icon {
+  opacity: 1;
+  color: #93C5FD;
+}
+
+/* 3 Action Buttons */
+.gd-showcase-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: auto;
+}
+
+.gd-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0.65rem 1.15rem;
+  border-radius: 6px;
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.2;
+}
+
+.gd-btn-red {
+  background-color: #E50914;
+  color: #FFFFFF;
+  border: 1px solid #E50914;
+}
+
+.gd-btn-red:hover {
+  background-color: #C70812;
+  border-color: #C70812;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.28);
+}
+
+.gd-btn-green {
+  background-color: #10B981;
+  color: #FFFFFF;
+  border: 1px solid #10B981;
+}
+
+.gd-btn-green:hover {
+  background-color: #059669;
+  border-color: #059669;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.28);
+}
+
+.gd-btn-outline {
+  background-color: #F8FAFC;
+  color: #02144B;
+  border: 1px solid #CBD5E1;
+}
+
+.gd-btn-outline:hover {
+  background-color: #FFFFFF;
+  border-color: #02144B;
+  color: #02144B;
+}
+
+/* =========================================================
+   COMMON SECTION HEADERS
+   ========================================================= */
+.gd-section-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 1.5rem;
+}
+
+.section-eyebrow-tag {
+  display: inline-block;
+  font-size: 0.725rem;
+  font-weight: 800;
+  color: #E50914;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.section-title-clean {
+  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  color: #02144B;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.section-subtitle-clean {
+  font-size: 0.885rem;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* =========================================================
+   3. SECTION 1: METALLURGY & CHEMISTRY
+   ========================================================= */
+.gd-metallurgy-section {
+  padding: 1rem 0 1.5rem;
+}
+
+.gd-chemistry-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(2, 20, 75, 0.04);
+  overflow: hidden;
+}
+
+.chem-card-header {
+  background-color: #02144B;
+  color: #FFFFFF;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chem-header-title {
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.chem-header-badge {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: 0.725rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #93C5FD;
+}
+
+.chem-table-scroll {
+  overflow-x: auto;
+}
+
+.gd-chem-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.825rem;
+  text-align: center;
+}
+
+.gd-chem-table th {
+  background-color: #F1F5F9;
+  color: #02144B;
+  font-weight: 800;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid #CBD5E1;
+  white-space: nowrap;
+}
+
+.gd-chem-table td {
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid #F1F5F9;
+  color: #1E293B;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gd-chem-table tr:hover td {
+  background-color: #FAFCFE;
+}
+
+.chem-card-footer {
+  padding: 0.85rem 1.25rem;
+  background-color: #F8FAFC;
+  border-top: 1px solid #EDF2F7;
+}
+
+.chem-footer-note {
+  font-size: 0.825rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.no-chem-note {
+  padding: 1.25rem;
+  color: #64748B;
+  font-size: 0.875rem;
+}
+
+/* =========================================================
+   4. SECTION 2: MECHANICAL & PHYSICAL DUAL GRID
+   ========================================================= */
+.gd-properties-section {
+  padding: 1rem 0 1.5rem;
+}
+
+.gd-props-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.gd-prop-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(2, 20, 75, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.prop-card-head {
+  background-color: #F8FAFC;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid #EDF2F7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prop-card-title {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #02144B;
+  margin: 0;
+}
+
+.prop-badge {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #1E40AF;
+  background-color: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.prop-list-table {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.prop-row-item {
+  display: grid;
+  grid-template-columns: 1.4fr 1.2fr 1fr;
+  padding: 0.65rem 1.25rem;
+  border-bottom: 1px solid #F1F5F9;
+  align-items: center;
+  font-size: 0.825rem;
+}
+
+.prop-row-item:last-child {
+  border-bottom: none;
+}
+
+.prop-row-item:hover {
+  background-color: #FAFCFE;
+}
+
+.prop-item-name {
+  font-weight: 600;
+  color: #475569;
+}
+
+.prop-item-val {
+  font-weight: 800;
+  color: #02144B;
+}
+
+.prop-item-val.highlight {
+  color: #E50914;
+}
+
+.prop-item-test {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  text-align: right;
+}
+
+/* =========================================================
+   5. SECTION 3: INTERNATIONAL EQUIVALENTS
+   ========================================================= */
+.gd-equivalents-section {
+  padding: 1rem 0 1.5rem;
+}
+
+.gd-equiv-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(2, 20, 75, 0.04);
+  padding: 1.5rem;
+}
+
+.equiv-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.equiv-item {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 1rem 0.85rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.equiv-item:hover {
+  transform: translateY(-2px);
+  border-color: #02144B;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(2, 20, 75, 0.06);
+}
+
+.equiv-standard {
+  font-size: 0.725rem;
+  font-weight: 800;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.equiv-code {
+  font-size: 0.925rem;
+  font-weight: 800;
+  color: #02144B;
+  line-height: 1.3;
+}
+
+.equiv-desc {
+  font-size: 0.725rem;
+  color: #94A3B8;
+}
+
+/* =========================================================
+   6. SECTION 4: PRODUCT SUPPLY SCOPE TABLE
+   ========================================================= */
+.gd-scope-section {
+  padding: 1rem 0 1.5rem;
+}
+
+.gd-specs-table-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(2, 20, 75, 0.04);
+  overflow: hidden;
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  border-bottom: 1px solid #EDF2F7;
+  transition: background-color 0.15s ease;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-row:hover {
+  background-color: #FAFCFE;
+}
+
+.spec-name-cell {
+  background-color: #F8FAFC;
+  padding: 1rem 1.25rem;
+  border-right: 1px solid #EDF2F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.spec-title {
+  font-size: 0.885rem;
+  font-weight: 800;
+  color: #02144B;
+}
+
+.spec-tag {
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.spec-value-cell {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: #334155;
+  line-height: 1.55;
+}
+
+.spec-value-cell strong {
+  color: #02144B;
+  font-weight: 700;
+}
+
+.spec-detail-note {
+  margin: 0.25rem 0 0;
+  font-size: 0.825rem;
+  color: #64748B;
+  line-height: 1.5;
+}
+
+.spec-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.spec-bullet-list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 0.825rem;
+  line-height: 1.45;
+}
+
+.spec-bullet-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #E50914;
+  font-weight: bold;
+}
+
+/* =========================================================
+   7. SECTION 5: APPLICATIONS GRID
+   ========================================================= */
+.gd-applications-section {
+  padding: 1rem 0 1.5rem;
+}
+
+.gd-app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.gd-app-box {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  box-shadow: 0 2px 6px rgba(2, 20, 75, 0.02);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.gd-app-box:hover {
+  transform: translateY(-2px);
+  border-color: #10B981;
+}
+
+.app-box-icon {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.app-box-text {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #02144B;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   8. SECTION 6: FAST QUOTATION & CONTACT CARD
+   ========================================================= */
+.gd-contact-section {
+  padding: 1rem 0 2.5rem;
+}
+
+.gd-contact-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(2, 20, 75, 0.05);
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  overflow: hidden;
+}
+
+.contact-card-left {
+  padding: 2rem;
+  background-color: #FAFCFE;
+  border-right: 1px solid #EEF2F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-card-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #E50914;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.contact-card-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #02144B;
+  line-height: 1.25;
+  margin: 0 0 0.85rem;
+}
+
+.contact-card-desc {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 1.25rem;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.825rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.contact-icon {
+  color: #02144B;
+  flex-shrink: 0;
+}
+
+.contact-card-right {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+.contact-actions-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.actions-box-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #02144B;
+  margin: 0;
+}
+
+.actions-box-desc {
+  font-size: 0.825rem;
+  color: #64748B;
+  margin: 0 0 0.25rem;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.2;
+}
+
+.contact-btn-whatsapp {
+  background-color: #10B981;
+  color: #FFFFFF;
+  border: 1px solid #10B981;
+}
+
+.contact-btn-whatsapp:hover {
+  background-color: #059669;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.28);
+}
+
+.contact-btn-phone {
+  background-color: #02144B;
+  color: #FFFFFF;
+  border: 1px solid #02144B;
+}
+
+.contact-btn-phone:hover {
+  background-color: #031D6B;
+  box-shadow: 0 4px 12px rgba(2, 20, 75, 0.28);
+}
+
+.contact-btn-back {
+  background-color: #F8FAFC;
+  color: #475569;
+  border: 1px solid #CBD5E1;
+}
+
+.contact-btn-back:hover {
+  background-color: #FFFFFF;
+  color: #02144B;
+  border-color: #02144B;
+}
+
+.btn-back-arrow {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   9. RESPONSIVE MEDIA QUERIES
+   ========================================================= */
+@media (max-width: 1024px) {
+  .gd-showcase-card {
+    grid-template-columns: 1fr;
+  }
+
+  .gd-showcase-media {
+    border-right: none;
+    border-bottom: 1px solid #EEF2F6;
+  }
+
+  .gd-showcase-img-wrap {
+    min-height: 320px;
+    max-height: 380px;
+  }
+
+  .gd-showcase-info {
+    padding: 1.5rem;
+  }
+
+  .gd-props-dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .equiv-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .spec-row {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .gd-app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gd-contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card-left {
+    border-right: none;
+    border-bottom: 1px solid #EEF2F6;
+  }
+}
+
+@media (max-width: 768px) {
+  .gd-showcase-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gd-action-btn {
+    width: 100%;
+  }
+
+  .equiv-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .prop-row-item {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+  }
+
+  .prop-item-test {
+    grid-column: span 2;
+    text-align: left;
+  }
+
+  .spec-row {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-name-cell {
+    border-right: none;
+    border-bottom: 1px solid #EDF2F7;
+    padding: 0.75rem 1rem;
+  }
+
+  .spec-value-cell {
+    padding: 0.85rem 1rem;
+  }
+
+  .gd-app-grid {
+    grid-template-columns: 1fr;
+  }
+}

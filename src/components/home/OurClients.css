@@ -1,0 +1,239 @@
+/**
+ * SURAJ PIPING — HOMEPAGE OUR CLIENTS SECTION STYLES
+ * High-end corporate industrial clients & partnerships showcase.
+ * Features:
+ * - Full-width Deep Navy-Blue background with subtle industrial grid texture
+ * - Centered eyebrow pill: "07 — INDUSTRIAL PARTNERSHIPS"
+ * - Bold white heading & legible supporting description
+ * - Outer framed container with thin blue-grey border & rounded corners
+ * - 6-column desktop grid with clean white cards holding company logos
+ * - Subtle, professional card hover lift
+ */
+
+.clients-section {
+  padding: 6.5rem 0 7rem;
+  background-color: var(--color-brand-navy-dark, #02144B);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   CENTERED SECTION HEADER
+   ========================================================================== */
+.clients-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyebrow Pill Label */
+.clients-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 1.15rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clients-eyebrow-icon {
+  color: #93C5FD;
+}
+
+.clients-eyebrow-text {
+  font-family: var(--font-family-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #E2E8F0;
+  text-transform: uppercase;
+}
+
+/* Main Heading */
+.clients-title {
+  font-family: var(--font-family-sans);
+  font-size: clamp(2.35rem, 3.6vw, 3rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Supporting Description */
+.clients-subtitle {
+  font-family: var(--font-family-sans);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #BAC7D5;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   OUTER CONTAINER (Framed Box)
+   ========================================================================== */
+.clients-outer-box {
+  background-color: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 1.75rem;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* ==========================================================================
+   CLIENT LOGOS GRID
+   ========================================================================== */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Logo Card */
+.client-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.25rem 0.85rem 1rem;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+  border-color: rgba(3, 30, 109, 0.32);
+}
+
+/* Logo Media Container */
+.client-logo-wrapper {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+.client-logo {
+  max-width: 100%;
+  max-height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Client Name */
+.client-name {
+  font-family: var(--font-family-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2D3748;
+  margin-top: 0.65rem;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .clients-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .clients-section {
+    padding: 5rem 0 5.5rem;
+  }
+
+  .clients-header {
+    margin-bottom: 3rem;
+  }
+
+  .clients-outer-box {
+    padding: 1.25rem;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .client-card {
+    height: 142px;
+  }
+}
+
+@media (max-width: 640px) {
+  .clients-section {
+    padding: 4.25rem 0 4.75rem;
+  }
+
+  .clients-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .clients-title {
+    font-size: 2rem;
+  }
+
+  .clients-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .clients-outer-box {
+    padding: 0.85rem;
+    border-radius: 10px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .client-card {
+    height: 132px;
+    padding: 1rem 0.5rem 0.75rem;
+    border-radius: 10px;
+  }
+
+  .client-logo-wrapper {
+    height: 52px;
+  }
+
+  .client-logo {
+    max-height: 38px;
+  }
+
+  .client-name {
+    font-size: 0.725rem;
+    margin-top: 0.45rem;
+  }
+}
+

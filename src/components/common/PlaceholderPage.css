@@ -1,0 +1,56 @@
+.placeholder-page {
+  padding: 5rem 0;
+  background-color: var(--color-steel-50);
+  min-height: calc(100vh - var(--navbar-height-desktop) - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-card {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  box-shadow: var(--shadow-md);
+}
+
+.placeholder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(3, 30, 109, 0.06);
+  color: var(--color-brand-navy);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+}
+
+.placeholder-clock-icon {
+  color: var(--color-primary-red);
+}
+
+.placeholder-title {
+  font-size: 2rem;
+  color: var(--color-steel-900);
+  margin-bottom: 1rem;
+}
+
+.placeholder-desc {
+  color: var(--color-steel-600);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.placeholder-action {
+  display: flex;
+  justify-content: center;
+}
+

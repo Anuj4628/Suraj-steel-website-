@@ -1,0 +1,486 @@
+/**
+ * SURAJ PIPING — PREMIUM NAVBAR STYLES
+ * Authoritative, modern industrial engineering navigation architecture.
+ */
+
+/* ==========================================================================
+   HEADER CONTAINER & STICKY BEHAVIOR
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-navbar);
+  background-color: var(--color-white);
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.site-header.header-scrolled {
+  box-shadow: var(--shadow-navbar);
+  border-bottom-color: var(--color-border-default);
+}
+
+/* ==========================================================================
+   MAIN NAVBAR
+   ========================================================================== */
+.main-navbar {
+  height: var(--navbar-height-desktop);
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  transition: height var(--transition-normal), background-color var(--transition-normal);
+}
+
+.header-scrolled .main-navbar {
+  height: var(--navbar-height-scrolled);
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* ==========================================================================
+   LOGO PRESENTATION
+   Large, sharp, prominent, adhering strictly to official aspect ratio.
+   ========================================================================== */
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0.25rem 0;
+  outline: none;
+  transition: opacity var(--transition-fast);
+}
+
+.navbar-logo-link:hover {
+  opacity: 0.94;
+}
+
+.navbar-brand-logo {
+  height: 72px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  transition: height var(--transition-normal);
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.header-scrolled .navbar-brand-logo {
+  height: 60px;
+}
+
+/* ==========================================================================
+   DESKTOP NAVIGATION LINKS & UNIQUE BORDER HOVER EFFECT
+   ========================================================================== */
+.desktop-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.desktop-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav-item {
+  position: relative;
+}
+
+/**
+ * Unique Industrial Border Hover Frame
+ * Creates a refined, high-end border frame on hover with crisp brand styling.
+ */
+.nav-link-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.1rem;
+  font-family: var(--font-family-sans);
+  font-size: 0.925rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  color: var(--color-steel-800);
+  text-decoration: none;
+  position: relative;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-normal), transform var(--transition-normal);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* The Animated Border Frame */
+.nav-hover-frame {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  background-color: transparent;
+  pointer-events: none;
+  transition: all var(--transition-normal);
+}
+
+/* Hover State */
+.nav-link-box:hover {
+  color: var(--color-brand-navy);
+  transform: translateY(-1px);
+}
+
+.nav-link-box:hover .nav-hover-frame {
+  border-color: var(--color-brand-navy);
+  background-color: rgba(3, 30, 109, 0.035);
+  box-shadow: 0 2px 8px rgba(3, 30, 109, 0.08);
+}
+
+/* Active Navigation State */
+.nav-link-box.nav-link-active {
+  color: var(--color-brand-navy);
+  font-weight: var(--font-weight-bold);
+}
+
+.nav-link-box.nav-link-active .nav-hover-frame {
+  border-color: var(--color-brand-navy);
+  background-color: rgba(3, 30, 109, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(3, 30, 109, 0.1);
+}
+
+/* Small active indicator accent dot for extra industrial finesse */
+.nav-link-box.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 2.5px;
+  background-color: var(--color-primary-red);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   DESKTOP RIGHT CTA (GET QUOTE)
+   ========================================================================== */
+.navbar-cta-wrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   MOBILE MENU TOGGLE (HAMBURGER)
+   ========================================================================== */
+.mobile-menu-toggle {
+  display: none; /* Hidden on desktop */
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1.5px solid var(--color-steel-200);
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(3, 30, 109, 0.08);
+  transition: all var(--transition-fast);
+}
+
+.mobile-menu-toggle:hover {
+  background-color: #F8FAFC;
+  border-color: var(--color-brand-navy);
+  box-shadow: 0 2px 8px rgba(3, 30, 109, 0.12);
+}
+
+.mobile-menu-toggle.is-active {
+  background-color: #FFF5F5;
+  border-color: var(--color-primary-red);
+}
+
+/* Animated Hamburger Bars */
+.hamburger-box {
+  width: 22px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-brand-navy);
+  border-radius: 2px;
+  position: absolute;
+  transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.hamburger-inner {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: '';
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -7px;
+}
+
+.hamburger-inner::after {
+  bottom: -7px;
+}
+
+/* Active State: Transforms Hamburger cleanly into Close 'X' */
+.mobile-menu-toggle.is-active .hamburger-inner {
+  background-color: transparent;
+}
+
+.mobile-menu-toggle.is-active .hamburger-inner::before {
+  transform: translateY(7px) rotate(45deg);
+  background-color: var(--color-primary-red);
+}
+
+.mobile-menu-toggle.is-active .hamburger-inner::after {
+  transform: translateY(-7px) rotate(-45deg);
+  background-color: var(--color-primary-red);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS FOR NAVBAR
+   ========================================================================== */
+
+/* Large Tablets & Medium Desktops (1024px - 1200px) */
+@media (max-width: 1200px) {
+  .navbar-container {
+    gap: 1rem;
+  }
+  
+  .desktop-nav-list {
+    gap: 0.35rem;
+  }
+  
+  .nav-link-box {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.875rem;
+  }
+  
+  .navbar-brand-logo {
+    height: 62px;
+    max-width: 240px;
+  }
+}
+
+/* Small Tablets & Mobile Devices (< 992px) */
+@media (max-width: 992px) {
+  .main-navbar {
+    height: var(--navbar-height-mobile, 72px);
+  }
+
+  .header-scrolled .main-navbar {
+    height: var(--navbar-height-mobile, 72px);
+  }
+
+  /* Hide desktop navigation and CTA button from mobile navbar:
+     Header contains ONLY [ LOGO ] and [ HAMBURGER MENU ] */
+  .desktop-navigation {
+    display: none;
+  }
+
+  .navbar-cta-wrapper {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .navbar-brand-logo {
+    height: 50px;
+    max-width: 205px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-brand-logo {
+    height: 46px;
+    max-width: 185px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar-brand-logo {
+    height: 40px;
+    max-width: 160px;
+  }
+}
+
+/* ==========================================================================
+   PRODUCT NAVBAR DROPDOWN
+   Deep navy-blue background with red and light blue accents
+   ========================================================================== */
+.desktop-nav-item.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dropdown-arrow-icon {
+  color: var(--color-steel-500);
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.desktop-nav-item.has-dropdown:hover .dropdown-arrow-icon,
+.desktop-nav-item.dropdown-active .dropdown-arrow-icon {
+  transform: rotate(180deg);
+  color: var(--color-primary-red);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 265px;
+  background-color: var(--color-brand-navy-dark, #02144B);
+  background-image: linear-gradient(180deg, #02144B 0%, #010B2B 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  box-shadow: 0 16px 38px rgba(2, 20, 75, 0.38);
+  padding: 0.65rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  z-index: 1000;
+}
+
+/* Invisible bridge hover zone so pointer transitions smoothly without closing */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
+}
+
+.desktop-nav-item.has-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Materials Multi-Column Dropdown */
+.nav-dropdown-menu.materials-dropdown-menu {
+  min-width: 480px;
+  width: 500px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+}
+
+.desktop-nav-item.has-dropdown:hover .nav-dropdown-menu.materials-dropdown-menu,
+.nav-dropdown-menu.materials-dropdown-menu.is-open {
+  transform: translateX(-50%) translateY(0);
+}
+
+.materials-dropdown-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px 8px;
+  padding: 0.35rem 0.5rem;
+}
+
+.materials-dropdown-inner .dropdown-item-link {
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+}
+
+.dropdown-item-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.25rem;
+  color: #E2E8F0;
+  text-decoration: none;
+  font-family: var(--font-family-sans);
+  font-size: 0.885rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.dropdown-item-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: all 0.2s ease;
+}
+
+.dropdown-item-text {
+  transition: color 0.2s ease;
+}
+
+.dropdown-item-arrow {
+  color: rgba(255, 255, 255, 0.35);
+  transition: all 0.2s ease;
+}
+
+.dropdown-item-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border-left-color: var(--color-primary-red, #E50914);
+  padding-left: 1.45rem;
+}
+
+.dropdown-item-link:hover .dropdown-item-bullet {
+  background-color: var(--color-primary-red, #E50914);
+  transform: scale(1.5);
+  box-shadow: 0 0 6px var(--color-primary-red, #E50914);
+}
+
+.dropdown-item-link:hover .dropdown-item-arrow {
+  color: var(--color-primary-red, #E50914);
+  transform: translateX(3px);
+}
+
+@media (max-width: 480px) {
+  .navbar-brand-logo {
+    height: 44px;
+    max-width: 180px;
+  }
+}
+
