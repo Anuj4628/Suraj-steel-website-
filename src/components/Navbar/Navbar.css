@@ -23,6 +23,126 @@
 }
 
 /* ==========================================================================
+   TOP INDUSTRIAL UTILITY BAR (ISO, CONTACTS, SOCIAL MEDIA)
+   ========================================================================== */
+.top-industrial-bar {
+  background-color: var(--color-brand-navy-dark, #02144B);
+  background-image: linear-gradient(90deg, #010B2B 0%, #02144B 50%, #010B2B 100%);
+  color: #E2E8F0;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.38rem 0;
+  transition: all var(--transition-normal);
+}
+
+.top-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.top-bar-left,
+.top-bar-center,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-left {
+  gap: 0.65rem;
+}
+
+.top-cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: #F8FAFC;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.cert-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22C55E;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+  flex-shrink: 0;
+}
+
+.top-bar-center {
+  gap: 0.85rem;
+}
+
+.top-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #E2E8F0;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color var(--transition-fast);
+}
+
+.top-contact-link:hover {
+  color: #FFFFFF;
+}
+
+.top-icon {
+  color: var(--color-primary-red, #E50914);
+  flex-shrink: 0;
+}
+
+.top-divider {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.75rem;
+}
+
+/* Right Social Media Links */
+.top-bar-right {
+  gap: 0.6rem;
+}
+
+.top-social-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.top-social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.top-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #E2E8F0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.top-social-btn:hover {
+  background-color: var(--color-primary-red, #E50914);
+  border-color: var(--color-primary-red, #E50914);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
    MAIN NAVBAR
    ========================================================================== */
 .main-navbar {
@@ -288,6 +408,22 @@
 
 /* Small Tablets & Mobile Devices (< 992px) */
 @media (max-width: 992px) {
+  .top-industrial-bar {
+    padding: 0.32rem 0;
+  }
+
+  .top-email-link {
+    display: none;
+  }
+
+  .top-divider {
+    display: none;
+  }
+
+  .top-social-label {
+    display: none;
+  }
+
   .main-navbar {
     height: var(--navbar-height-mobile, 72px);
   }
@@ -317,6 +453,19 @@
 }
 
 @media (max-width: 640px) {
+  .top-cert-badge .cert-text {
+    font-size: 0.7rem;
+  }
+
+  .top-contact-link {
+    font-size: 0.7rem;
+  }
+
+  .top-social-btn {
+    width: 24px;
+    height: 24px;
+  }
+
   .navbar-brand-logo {
     height: 46px;
     max-width: 185px;
@@ -324,6 +473,14 @@
 }
 
 @media (max-width: 375px) {
+  .top-cert-badge .cert-text {
+    font-size: 0.65rem;
+  }
+
+  .top-contact-link {
+    font-size: 0.65rem;
+  }
+
   .navbar-brand-logo {
     height: 40px;
     max-width: 160px;

@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   MessageCircle,
 } from 'lucide-react';
+import { InstagramIcon, FacebookIcon, TwitterIcon } from '../common/SocialIcons';
 import logoImage from '../../assets/logo/suraj-logo.jpg';
 import Button from '../Button/Button';
 import './MobileMenu.css';
@@ -185,6 +186,42 @@ export default function MobileMenu({ isOpen, onClose, navLinks, navCta, quickInf
             <div className="mobile-footer-loc">
               <MapPin size={14} className="mobile-footer-icon" />
               <span>{quickInfo.location}</span>
+            </div>
+          </div>
+
+          <div className="mobile-drawer-socials">
+            <span className="mobile-socials-label">Follow Us:</span>
+            <div className="mobile-socials-icons">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-social-icon-btn"
+                aria-label="Instagram"
+                title="Instagram"
+              >
+                <InstagramIcon size={16} />
+              </a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-social-icon-btn"
+                aria-label="Facebook"
+                title="Facebook"
+              >
+                <FacebookIcon size={16} />
+              </a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-social-icon-btn"
+                aria-label="Twitter / X"
+                title="Twitter / X"
+              >
+                <TwitterIcon size={15} />
+              </a>
             </div>
           </div>
         </div>

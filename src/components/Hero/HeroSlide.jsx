@@ -1,8 +1,36 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, ShieldCheck, CheckCircle2, Truck, Globe2 } from 'lucide-react';
 import Button from '../Button/Button';
 
 export default function HeroSlide({ slide, isActive, index }) {
+  // Industrial Trust & Supply Capability Badges (Replacing technical specs)
+  const trustBadges = [
+    {
+      id: 'iso',
+      icon: ShieldCheck,
+      heading: 'ISO 9001:2015',
+      subtext: 'Certified Plant',
+    },
+    {
+      id: 'mtc',
+      icon: CheckCircle2,
+      heading: '100% Tested & MTC',
+      subtext: 'EN 10204 3.1 Reports',
+    },
+    {
+      id: 'stock',
+      icon: Truck,
+      heading: 'Ready Stock',
+      subtext: 'Immediate Dispatch',
+    },
+    {
+      id: 'export',
+      icon: Globe2,
+      heading: 'Global Export',
+      subtext: '25+ Nations Served',
+    },
+  ];
+
   return (
     <div
       className={`hero-slide ${isActive ? 'is-active' : ''}`}
@@ -79,17 +107,23 @@ export default function HeroSlide({ slide, isActive, index }) {
             )}
           </div>
 
-          {/* Bottom Statistics / Technical Specifications Columns */}
-          {slide.specs && slide.specs.length > 0 && (
-            <div className="hero-specs-row">
-              {slide.specs.map((spec, i) => (
-                <div key={i} className="hero-spec-pill">
-                  <span className="hero-spec-value">{spec.value}</span>
-                  <span className="hero-spec-label">{spec.label}</span>
+          {/* Premium Industrial Trust & Supply Capability Ribbon */}
+          <div className="hero-trust-ribbon">
+            {trustBadges.map((badge) => {
+              const IconComponent = badge.icon;
+              return (
+                <div key={badge.id} className="hero-trust-card">
+                  <div className="hero-trust-icon-wrap" aria-hidden="true">
+                    <IconComponent size={16} />
+                  </div>
+                  <div className="hero-trust-meta">
+                    <span className="hero-trust-heading">{badge.heading}</span>
+                    <span className="hero-trust-subtext">{badge.subtext}</span>
+                  </div>
                 </div>
-              ))}
-            </div>
-          )}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

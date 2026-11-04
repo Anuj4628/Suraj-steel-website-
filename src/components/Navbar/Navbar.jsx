@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronDown, ChevronRight, Phone, Mail, ShieldCheck } from 'lucide-react';
 import { navLinks, navCta, companyContactQuickInfo } from '../../data/navigation';
+import { InstagramIcon, FacebookIcon, TwitterIcon } from '../common/SocialIcons';
 import Button from '../Button/Button';
 import logoImage from '../../assets/logo/suraj-logo.jpg';
 import MobileMenu from './MobileMenu';
@@ -64,6 +65,77 @@ export default function Navbar() {
   return (
     <>
       <header className={`site-header ${isScrolled ? 'header-scrolled' : ''}`}>
+        {/* Top Industrial Bar — ISO, Direct Contacts & Social Media */}
+        <div className="top-industrial-bar">
+          <div className="container top-bar-container">
+            {/* Left: ISO Certification Badge */}
+            <div className="top-bar-left">
+              <span className="top-cert-badge">
+                <span className="cert-status-dot"></span>
+                <span className="cert-text">ISO 9001:2015 Certified Company</span>
+              </span>
+            </div>
+
+            {/* Center: Phone & Gmail Direct Contacts */}
+            <div className="top-bar-center">
+              <a
+                href={`tel:${companyContactQuickInfo.phone.replace(/\s+/g, '')}`}
+                className="top-contact-link"
+                title="Call Suraj Pipe And Fitting"
+              >
+                <Phone size={13} className="top-icon" />
+                <span>{companyContactQuickInfo.phone}</span>
+              </a>
+              <span className="top-divider" aria-hidden="true">|</span>
+              <a
+                href={`mailto:${companyContactQuickInfo.email}`}
+                className="top-contact-link top-email-link"
+                title="Email Suraj Pipe And Fitting"
+              >
+                <Mail size={13} className="top-icon" />
+                <span>{companyContactQuickInfo.email}</span>
+              </a>
+            </div>
+
+            {/* Right: Social Media Handles */}
+            <div className="top-bar-right">
+              <span className="top-social-label">Follow Us:</span>
+              <div className="top-social-links">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="top-social-btn"
+                  aria-label="Follow us on Instagram"
+                  title="Instagram"
+                >
+                  <InstagramIcon size={14} />
+                </a>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="top-social-btn"
+                  aria-label="Follow us on Facebook"
+                  title="Facebook"
+                >
+                  <FacebookIcon size={14} />
+                </a>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="top-social-btn"
+                  aria-label="Follow us on Twitter"
+                  title="Twitter / X"
+                >
+                  <TwitterIcon size={13} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Main Navbar */}
         <div className="main-navbar">
           <div className="container navbar-container">
