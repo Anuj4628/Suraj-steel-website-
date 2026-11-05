@@ -370,20 +370,6 @@
     max-width: 175px;
   }
 
-  .hero-section {
-    min-height: 610px;
-    padding: 0;
-  }
-
-  .hero-content-container {
-    padding-top: 0;
-    padding-bottom: 4rem;
-  }
-
-  .hero-headline {
-    font-size: 1.65rem;
-  }
-
   .product-image-container {
     height: 200px;
     padding: 1rem;
@@ -465,14 +451,6 @@
 
   .site-footer {
     padding-bottom: 7rem;
-  }
-
-  .hero-headline {
-    font-size: 1.4rem;
-  }
-
-  .hero-description {
-    font-size: 0.825rem;
   }
 
   .product-card-body {
