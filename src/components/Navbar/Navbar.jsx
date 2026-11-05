@@ -243,9 +243,11 @@ export default function Navbar() {
               aria-label={isMobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               aria-expanded={isMobileMenuOpen}
             >
-              <span className="hamburger-box">
-                <span className="hamburger-inner"></span>
-              </span>
+              {isMobileMenuOpen ? (
+                <X size={22} className="mobile-toggle-icon" />
+              ) : (
+                <Menu size={22} className="mobile-toggle-icon" />
+              )}
             </button>
           </div>
         </div>
